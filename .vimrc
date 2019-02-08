@@ -5,6 +5,8 @@ Plug 'itchyny/vim-gitbranch'
 Plug 'w0rp/ale'
 Plug 'airblade/vim-gitgutter'
 Plug 'ajh17/spacegray.vim'
+Plug 'scrooloose/syntastic'
+Plug 'maxboisvert/vim-simple-complete'
 
 call plug#end()
 
@@ -30,3 +32,24 @@ let g:lightline = {
 let g:spacegray_underline_search = 1
 let g:spacegray_use_italics = 1
 let g:spacegray_low_contrast = 1
+
+" Impostazioni syntasic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+" Impostazioni vim-simple-complete
+set complete-=t
+set complete-=i
+
+" Impostazioni personali
+syntax enable
+set number
+set ts=4
+set autoindent
+
