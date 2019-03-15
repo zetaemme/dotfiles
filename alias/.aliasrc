@@ -1,1 +1,3 @@
 alias apu="~/.apt_upgrade.sh"
+alias matlab="~/MATLAB/bin/matlab"
+alias ran='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
