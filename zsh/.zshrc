@@ -1,6 +1,11 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+# Start i3 at login
+if [[ "$(tty)" == "/dev/tty1" ]] then
+  startx
+fi
+
 # Path to your oh-my-zsh installation.
   export ZSH="/home/mattiazorzan/.oh-my-zsh"
 
