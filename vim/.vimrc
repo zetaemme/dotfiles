@@ -11,6 +11,8 @@ Plug 'itchyny/vim-gitbranch'
 Plug 'maxboisvert/vim-simple-complete'
 Plug 'francoiscabrol/ranger.vim'
 Plug 'raimondi/delimitmate' 
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown' 
 
 call plug#end()
 
@@ -43,14 +45,6 @@ set number
 set ts=4
 set autoindent
 
-" Shortcuts (Compile)
-map <F5> :w <CR> :!clear && gcc % -o %< && ./%< <CR>
-map <F6> :w <CR> :!clear && python3 % <CR>
-
 " Shortcuts (Vim Commands)
-" Quit
-noremap <C-p> :q <CR>
-" Write
-noremap <C-l> :w <CR>
 " Ranger
 noremap <C-R> :Ranger <CR>
