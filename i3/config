@@ -13,7 +13,7 @@ bindsym $mod+y border pixel 2
 floating_modifier $mod
 
 # Run terminal
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec kitty
 
 # Window kill command
 bindsym $mod+Shift+q kill
