@@ -30,11 +30,8 @@ bindsym $mod+c exec --no-startup-id code
 # Launch Atom
 bindsym $mod+a exec --no-startup-id atom
 
-# Launch Spotify
-bindsym $mod+s --no-startup-id flatpak run com.spotify.Client
-
 # Lockscreen
-bindsym $mod+l --no-startup-id i3lock-fancy
+bindsym $mod+l exec --no-startup-id i3lock-fancy
 
 # Change focus
 bindsym $mod+Left focus left
