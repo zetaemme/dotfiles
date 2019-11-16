@@ -19,10 +19,10 @@ bindsym $mod+Return exec kitty
 bindsym $mod+Shift+q kill
 
 # start program launcher
-bindsym $mod+d exec --no-startup-id rofi -show drun -theme oxide
+bindsym $mod+d exec --no-startup-id rofi -show drun -theme Material
 
-# Launch Firefox 
-bindsym $mod+f exec --no-startup-id firefox
+# Launch Chromium 
+bindsym $mod+w exec --no-startup-id chromium
 
 # Launch Visual Studio Code
 bindsym $mod+c exec --no-startup-id code
@@ -31,10 +31,10 @@ bindsym $mod+c exec --no-startup-id code
 bindsym $mod+a exec --no-startup-id atom
 
 # Launch Spotify
-bindsym $mod+s --no-startup-id flatpak run com.spotify.Client
+bindsym $mod+s exec --no-startup-id snap run spotify
 
 # Lockscreen
-bindsym $mod+l --no-startup-id i3lock-fancy
+bindsym $mod+l exec --no-startup-id i3lock-fancy
 
 # Change focus
 bindsym $mod+Left focus left
@@ -61,8 +61,8 @@ bindsym $mod+q split toggle
 bindsym $mod+Shift+f fullscreen toggle
 
 # Change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
+bindsym $mod+Shift+s layout stacking
+bindsym $mod+Shift+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # Toggle tiling / floating
@@ -70,9 +70,6 @@ bindsym $mod+Shift+space floating toggle
 
 # Change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
-
-# Toggle sticky
-bindsym $mod+Shift+s sticky toggle
 
 # Focus the parent container
 bindsym $mod+Shift+a focus parent
@@ -166,7 +163,7 @@ mode "resize" {
 
 # Gaps
 gaps outer 5
-gaps inner 15
+gaps inner 5
 
 # Autostart applications
 exec --no-startup-id nm-applet
@@ -192,3 +189,6 @@ bindsym XF86AudioMute exec pamixer --toggle-mute
 # Touchpad on and off controller on laptop with Fn+<touchpad control functional key>
 bindsym XF86TouchpadOn exec --no-startup-id synclient Touchpadoff=0
 bindsym XF86TouchpadOff exec --no-startup-id synclient Touchpadoff=1
+
+# Compton
+exec --no-startup-id compton -b
