@@ -1,3 +1,5 @@
-alias apu="~/.apt_upgrade.sh"
-alias matlab="~/MATLAB/bin/matlab"
+alias get_updated_mirrorlist='./.scripts/.get_updated_mirrorlist.sh'
 alias ran='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
+alias matlab='/usr/local/MATLAB/R2019b/bin/matlab'
+alias la='ls -a'
+alias vpn='./.scripts/.vpn.sh'
