@@ -19,10 +19,10 @@ bindsym $mod+Return exec kitty
 bindsym $mod+Shift+q kill
 
 # start program launcher
-bindsym $mod+d exec --no-startup-id rofi -show drun -theme Material
+bindsym $mod+d exec --no-startup-id ~/.config/rofi/launchers/launcher.sh
 
-# Launch Chromium 
-bindsym $mod+w exec --no-startup-id chromium
+# Launch Brave 
+bindsym $mod+w exec --no-startup-id brave
 
 # Launch Visual Studio Code
 bindsym $mod+c exec --no-startup-id code
@@ -34,7 +34,7 @@ bindsym $mod+a exec --no-startup-id atom
 bindsym $mod+s exec --no-startup-id snap run spotify
 
 # Lockscreen
-bindsym $mod+l exec --no-startup-id i3lock-fancy
+bindsym $mod+l exec --no-startup-id dm-tool lock
 
 # Change focus
 bindsym $mod+Left focus left
@@ -190,5 +190,5 @@ bindsym XF86AudioMute exec pamixer --toggle-mute
 bindsym XF86TouchpadOn exec --no-startup-id synclient Touchpadoff=0
 bindsym XF86TouchpadOff exec --no-startup-id synclient Touchpadoff=1
 
-# Compton
-exec --no-startup-id compton -b
+# Picom
+exec --no-startup-id picom -b
