@@ -21,14 +21,11 @@ bindsym $mod+Shift+q kill
 # start program launcher
 bindsym $mod+d exec --no-startup-id ~/.config/rofi/launchers/launcher.sh
 
-# Launch Brave 
-bindsym $mod+w exec --no-startup-id brave
+# Launch Chromium 
+bindsym $mod+w exec --no-startup-id chromium
 
 # Launch Visual Studio Code
 bindsym $mod+c exec --no-startup-id code
-
-# Launch Atom
-bindsym $mod+a exec --no-startup-id atom
 
 # Launch Spotify
 bindsym $mod+s exec --no-startup-id snap run spotify
