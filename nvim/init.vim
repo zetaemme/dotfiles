@@ -46,7 +46,9 @@ set complete-=i
 " Impostazioni personali
 syntax enable
 set number
-set ts=4
+set tabstop=4
+set shiftwidth=4
+set expandtab
 set autoindent
 
 " Shortcuts (Vim Commands)
