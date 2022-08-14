@@ -25,7 +25,7 @@ zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 setopt MENU_COMPLETE
 setopt PROMPT_SUBST
 
-prompt='%B[%b%n@%m%B]%b %F{blue}%B%1~%b$f '
+prompt='%B[%b%n@%m%B]%b %F{blue}%B%1~%b%f '
 RPROMPT=\$vcs_info_msg_0_
 
 source ~/.aliasrc
