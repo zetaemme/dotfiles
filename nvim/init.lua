@@ -3,9 +3,10 @@ local Plug = vim.fn['plug#']
 
 vim.call('plug#begin', '~/.vim/plugged')
 
-Plug 'itchyny/lightline.vim'
 Plug 'itchyny/vim-gitbranch'
-Plug 'joshdick/onedark.vim'
+Plug 'marko-cerovac/material.nvim'
+Plug 'nvim-lualine/lualine.nvim'
+Plug 'kyazdani42/nvim-web-devicons'
 
 vim.call('plug#end')
 
@@ -31,7 +32,30 @@ if vim.fn.exists('+termguicolors') then
 end
 
 -- Colorscheme
-vim.cmd 'colorscheme onedark'
+require('material').setup({
+    italics = {
+		comments = true,
+		keywords = true,
+		functions = false,
+		strings = false,
+		variables = false
+	},
+
+    high_visibility = {
+		lighter = false,
+		darker = true
+	},
+
+    lualine_style = "default",
+
+	async_loading = true
+})
+
+vim.g.material_style = "darker"
+vim.cmd 'colorscheme material'
+
+-- LuaLine
+require('lualine').setup()
 
 -- Line Numbers
 vim.wo.relativenumber = true
@@ -47,19 +71,6 @@ vim.opt.showmode = false
 
 vim.cmd 'set t_Co=256'
 
-vim.cmd [[
-    let g:lightline = {
-          \ 'colorscheme': 'onedark',
-          \ 'active': {
-          \   'left': [ [ 'mode', 'paste' ],
-          \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
-          \ },
-          \ 'component_function': {
-          \   'gitbranch': 'gitbranch#name'
-          \ },
-          \ }
-]]
-
 -- Keymaps
 local keymap = vim.api.nvim_set_keymap
 
@@ -74,4 +85,3 @@ keymap('n', '<c-j>', ':<c-w>j', opts)
 keymap('n', '<c-h>', ':<c-w>h', opts)
 keymap('n', '<c-k>', ':<c-w>k', opts)
 keymap('n', '<c-l>', ':<c-w>l', opts)
-
