@@ -13,6 +13,7 @@ zstyle ':vcs_info:git:*' formats '%fgit:(%F{red}%b%f)'
 zstyle ':completion:*' menu select
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 
+setopt autocd
 setopt MENU_COMPLETE
 setopt PROMPT_SUBST
 
@@ -21,3 +22,5 @@ RPROMPT=\$vcs_info_msg_0_
 
 source .aliasrc
 source ${(q-)PWD}/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+export EDITOR=nvim
